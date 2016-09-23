@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title> {{title}} </title>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <style>
+      {%- for selector in style  %}
+      {{ selector }} {
+      {%- for pair in style[selector] %}
+      {{ pair }}: {{  style[selector][pair] }};
+
+      {%- endfor %}
+      }
+
+      {%- endfor %}
+    </style>
+  </head>
+  <body>
+    <h1> {{title}} </h1>
+  </body>
+</html>
