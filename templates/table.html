@@ -7,8 +7,12 @@
   </head>
   <body>
     <h1> {{title}} </h1>
-    <p>by Sebastian Cain of Period 8</p>
-    <a href="/table">view all occupations</a><br>
-    <a href="/random">get a random occupation</a>
+    <a href="/">back home</a><br><br>
+    <table>
+      {%- for line in tableData %}
+      <tr><td>{{line[0]}}</td><td>{{line[1]}}</td></tr>
+
+      {%- endfor %}
+    </table>
   </body>
 </html>
