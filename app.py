@@ -7,7 +7,7 @@ app = Flask(__name__)
 def route1():
 	return render_template("index.html", title = "Occu-Table Central")
 
-@app.route("/table")
+@app.route("/occupations")
 
 def route2():
 	return render_template("table.html", title = "occupations", tableData = getTableMatrix(), occupation = getRandom())
