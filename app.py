@@ -10,7 +10,7 @@ def route1():
 @app.route("/occupations")
 
 def route2():
-	return render_template("table.html", title = "occupations", tableData = getTableMatrix(), occupation = getRandom())
+	return render_template("table.html", title = "data/occupations", tableData = getTableMatrix(), occupation = getRandom())
 
 def getTableMatrix():
     occu = open("occupations.csv", "r")
